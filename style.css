@@ -39,13 +39,32 @@ li {
 /* Clases especificas y pseudo clases */
 .card {
     min-height: 35vh;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
-.card img {
-    min-height: 35vh;
-    height: 100%
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.card-title {
+    min-height: 5.2rem; /* Ajusta esto según sea necesario */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.card img {
+    width: 100%; /* Ocupará todo el ancho disponible */
+    height: 100%; /* Ocupará todo el alto disponible dentro de su contenedor */
+    object-fit: cover; /* Se asegurará de que la imagen cubra el espacio sin deformarse */
+}
+
 
 .card-text {
     /*De mi para mi: Esta es una forma comoda de limitar la cantidad de lineas de texto que puede llegar a tener uno
@@ -57,6 +76,7 @@ li {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-height: 10.5rem;
 }
 
 .lc-1 ul li a {
